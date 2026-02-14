@@ -13,14 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/sunrisesunset';
  */
 async function callSunriseSunsetAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            lat: 36.7201600,
-            lon: -4.4203400,
-            date: &#x27;12-02-2025&#x27;
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
