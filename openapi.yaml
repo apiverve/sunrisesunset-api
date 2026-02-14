@@ -1,46 +1,50 @@
 openapi: 3.0.4
 info:
   title: Sunrise Sunset
-  description: Sunrise Sunset is a simple tool for getting the sunrise and sunset times. It returns the sunrise and sunset times for a given location and date.
+  description: >-
+    Sunrise Sunset is a simple tool for getting the sunrise and sunset times. It
+    returns the sunrise and sunset times for a given location and date.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/sunrisesunset:
     get:
       summary: Get Sunrise Sunset
-      description: Sunrise Sunset is a simple tool for getting the sunrise and sunset times. It returns the sunrise and sunset times for a given location and date.
+      description: Get the sunrise and sunset times for a given location
       operationId: sunrisesunset
       parameters:
-      - name: lat
-        in: query
-        schema:
-          type: number
-        required: true
-        description: The latitude of the location for which you want to get the sunrise and sunset times (e.g., 36.7201600)
-        example: '36.7201600'
-      - name: lon
-        in: query
-        schema:
-          type: number
-        required: true
-        description: The longitude of the location for which you want to get the sunrise and sunset times (e.g., -4.4203400)
-        example: '-4.4203400'
-      - name: date
-        in: query
-        schema:
-          type: string
-        required: false
-        description: 'The date for which you want to get the sunrise and sunset times (e.g., MM-DD-YYYY : 01-01-2022)'
-        example: 12-03-2025
+        - name: lat
+          in: query
+          schema:
+            type: number
+          required: true
+          description: The latitude of the location
+          example: 36.72016
+        - name: lon
+          in: query
+          schema:
+            type: number
+          required: true
+          description: The longitude of the location
+          example: -4.42034
+        - name: date
+          in: query
+          schema:
+            type: string
+          required: false
+          description: >-
+            The date for which you want to get the sunrise and sunset times
+            (e.g., MM-DD-YYYY : 01-01-2022)
+          example: 01-16-2026
       responses:
         '200':
           description: Successful Response
@@ -56,31 +60,31 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
-                  solarNoon: 2025-02-20T12:32:53.1320000Z
-                  sunrise: 2025-02-20T07:01:34.0820000Z
-                  sunset: 2025-02-20T18:04:12.1820000Z
-                  sunriseEnd: 2025-02-20T07:04:17.9870000Z
-                  sunsetStart: 2025-02-20T18:01:28.2780000Z
-                  dawn: 2025-02-20T06:35:17.5680000Z
-                  dusk: 2025-02-20T18:30:28.6960000Z
-                  nauticalDawn: 2025-02-20T06:05:07.5100000Z
-                  nauticalDusk: 2025-02-20T19:00:38.7540000Z
-                  nightEnd: 2025-02-20T05:35:08.8590000Z
-                  night: 2025-02-20T19:30:37.4050000Z
-                  goldenHourEnd: 2025-02-20T07:36:59.5090000Z
-                  goldenHour: 2025-02-20T17:28:46.7560000Z
+                  solarNoon: '2025-12-16T12:14:40.51Z'
+                  sunrise: '2025-12-16T07:24:56.165Z'
+                  sunset: '2025-12-16T17:04:24.854Z'
+                  sunriseEnd: '2025-12-16T07:27:58.828Z'
+                  sunsetStart: '2025-12-16T17:01:22.192Z'
+                  dawn: '2025-12-16T06:56:02.774Z'
+                  dusk: '2025-12-16T17:33:18.245Z'
+                  nauticalDawn: '2025-12-16T06:23:38.134Z'
+                  nauticalDusk: '2025-12-16T18:05:42.886Z'
+                  nightEnd: '2025-12-16T05:52:07.048Z'
+                  night: '2025-12-16T18:37:13.971Z'
+                  goldenHourEnd: '2025-12-16T08:05:08.406Z'
+                  goldenHour: '2025-12-16T16:24:12.613Z'
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -88,4 +92,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
