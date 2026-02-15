@@ -1,1 +1,3 @@
-from .apiClient import SunrisesunsetAPIClient
+from .apiClient import SunrisesunsetAPIClient, SunrisesunsetAPIClientError
+
+__all__ = ['SunrisesunsetAPIClient', 'SunrisesunsetAPIClientError']
