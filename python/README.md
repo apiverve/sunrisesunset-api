@@ -44,7 +44,11 @@ from apiverve_sunrisesunset.apiClient import SunrisesunsetAPIClient
 # Initialize the client with your APIVerve API key
 api = SunrisesunsetAPIClient("[YOUR_API_KEY]")
 
-query = { "lat": 36.72016, "lon": -4.42034, "date": "01-16-2026" }
+query = {
+    "lat": 36.72016,
+    "lon": -4.42034,
+    "date": "01-16-2026"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "lat": 36.72016, "lon": -4.42034, "date": "01-16-2026" }
+query = {
+    "lat": 36.72016,
+    "lon": -4.42034,
+    "date": "01-16-2026"
+}
 ```
 
 ###### Simple Request
@@ -132,7 +140,11 @@ from apiverve_sunrisesunset.apiClient import SunrisesunsetAPIClient, Sunrisesuns
 
 api = SunrisesunsetAPIClient("[YOUR_API_KEY]")
 
-query = { "lat": 36.72016, "lon": -4.42034, "date": "01-16-2026" }
+query = {
+    "lat": 36.72016,
+    "lon": -4.42034,
+    "date": "01-16-2026"
+}
 
 try:
     result = api.execute(query)
@@ -153,7 +165,11 @@ from apiverve_sunrisesunset.apiClient import SunrisesunsetAPIClient, Sunrisesuns
 
 api = SunrisesunsetAPIClient("[YOUR_API_KEY]")
 
-query = { "lat": 36.72016, "lon": -4.42034, "date": "01-16-2026" }
+query = {
+    "lat": 36.72016,
+    "lon": -4.42034,
+    "date": "01-16-2026"
+}
 
 try:
     result = api.execute(query)
@@ -187,7 +203,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_sunrisesunset.apiClient import SunrisesunsetAPIClient, SunrisesunsetAPIClientError
 
-query = { "lat": 36.72016, "lon": -4.42034, "date": "01-16-2026" }
+query = {
+    "lat": 36.72016,
+    "lon": -4.42034,
+    "date": "01-16-2026"
+}
 
 # Using context manager ensures proper cleanup
 with SunrisesunsetAPIClient("[YOUR_API_KEY]") as api:
@@ -213,7 +233,11 @@ from apiverve_sunrisesunset.apiClient import SunrisesunsetAPIClient
 # Enable debug mode
 api = SunrisesunsetAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "lat": 36.72016, "lon": -4.42034, "date": "01-16-2026" }
+query = {
+    "lat": 36.72016,
+    "lon": -4.42034,
+    "date": "01-16-2026"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -228,8 +252,13 @@ from apiverve_sunrisesunset.apiClient import SunrisesunsetAPIClient
 
 api = SunrisesunsetAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "lat": 36.72016,
+    "lon": -4.42034,
+    "date": "01-16-2026"
+}
+
 try:
-    query = { "lat": 36.72016, "lon": -4.42034, "date": "01-16-2026" }
     result = api.execute(query)
     print(result)
 finally:
