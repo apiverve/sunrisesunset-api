@@ -30,7 +30,12 @@ The Sunrise Sunset API provides a simple, reliable way to integrate sunrise suns
 ```javascript
 async function callSunriseSunsetAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/sunrisesunset', {
+        const params = new URLSearchParams({
+            lat: 36.72016,
+            lon: -4.42034
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/sunrisesunset?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +55,7 @@ callSunriseSunsetAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/sunrisesunset?param=value" \
+curl -X GET "https://api.apiverve.com/v1/sunrisesunset?lat=36.72016&lon=-4.42034" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,7 +155,7 @@ go get github.com/apiverve/sunrisesunset-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
@@ -169,7 +174,7 @@ go get github.com/apiverve/sunrisesunset-api/go
 The Sunrise Sunset API is commonly used for:
 
 - **Web Applications** - Add sunrise sunset features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with sunrise sunset capabilities
 - **Data Pipelines** - Process and analyze data at scale
