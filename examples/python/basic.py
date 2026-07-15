@@ -17,11 +17,14 @@ def call_sunrisesunset_api():
     Make a GET request to the Sunrise Sunset API
     """
     try:
+        # Query parameters
+        params &#x3D; {&#x27;lat&#x27;: 36.72016, &#x27;lon&#x27;: -4.42034}
+
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.get(API_URL, headers=headers, params=params)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
