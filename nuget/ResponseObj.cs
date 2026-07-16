@@ -24,48 +24,21 @@ namespace APIVerve.API.SunriseSunset
         public object Error { get; set; }
 
         [JsonProperty("data")]
-        public Data Data { get; set; }
+        public Dictionary<string, DateTimeOffset?> Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
-    public partial class Data
+    public partial class Premium
     {
-        [JsonProperty("solarNoon")]
-        public DateTimeOffset SolarNoon { get; set; }
+        [JsonProperty("message")]
+        public string Message { get; set; }
 
-        [JsonProperty("sunrise")]
-        public DateTimeOffset Sunrise { get; set; }
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
 
-        [JsonProperty("sunset")]
-        public DateTimeOffset Sunset { get; set; }
-
-        [JsonProperty("sunriseEnd")]
-        public DateTimeOffset SunriseEnd { get; set; }
-
-        [JsonProperty("sunsetStart")]
-        public DateTimeOffset SunsetStart { get; set; }
-
-        [JsonProperty("dawn")]
-        public DateTimeOffset Dawn { get; set; }
-
-        [JsonProperty("dusk")]
-        public DateTimeOffset Dusk { get; set; }
-
-        [JsonProperty("nauticalDawn")]
-        public DateTimeOffset NauticalDawn { get; set; }
-
-        [JsonProperty("nauticalDusk")]
-        public DateTimeOffset NauticalDusk { get; set; }
-
-        [JsonProperty("nightEnd")]
-        public DateTimeOffset NightEnd { get; set; }
-
-        [JsonProperty("night")]
-        public DateTimeOffset Night { get; set; }
-
-        [JsonProperty("goldenHourEnd")]
-        public DateTimeOffset GoldenHourEnd { get; set; }
-
-        [JsonProperty("goldenHour")]
-        public DateTimeOffset GoldenHour { get; set; }
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
