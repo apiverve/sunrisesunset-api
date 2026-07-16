@@ -14,13 +14,13 @@ namespace APIVerve.API.SunriseSunset
         /// The latitude of the location
         /// </summary>
         [JsonProperty("lat")]
-        public string Lat { get; set; }
+        public double Lat { get; set; }
 
         /// <summary>
         /// The longitude of the location
         /// </summary>
         [JsonProperty("lon")]
-        public string Lon { get; set; }
+        public double Lon { get; set; }
 
         /// <summary>
         /// The date for which you want to get the sunrise and sunset times (e.g., MM-DD-YYYY : 01-01-2022)
