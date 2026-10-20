@@ -1,13 +1,12 @@
 Sunrise Sunset API
 ============
 
-Sunrise Sunset is a simple tool for getting the sunrise and sunset times. It returns the sunrise and sunset times for a given location and date.
+Sunrise Sunset calculates exact sunrise and sunset times, twilight stages, and golden hour windows for any latitude and longitude coordinates. Paid plans can specify custom dates and receive solar noon.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Sunrise Sunset API](https://sunrisesunset.apiverve.com?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-sunrisesunset.svg)](https://pypi.org/project/apiverve-sunrisesunset/)
+
+This is a Python wrapper for the [Sunrise Sunset API](https://apiverve.com/marketplace/sunrisesunset?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-sunrisesunset
 
 ## Configuration
 
-Before using the sunrisesunset API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Sunrise Sunset API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -64,7 +63,7 @@ except Exception as e:
 
 ## Usage
 
-The Sunrise Sunset API documentation is found here: [https://docs.apiverve.com/ref/sunrisesunset](https://docs.apiverve.com/ref/sunrisesunset?utm_source=pypi&utm_medium=readme).
+The Sunrise Sunset API documentation is found here: [https://docs.apiverve.com/ref/sunrisesunset](https://docs.apiverve.com/ref/sunrisesunset?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -110,19 +109,19 @@ print(result)
   "status": "ok",
   "error": null,
   "data": {
-    "solarNoon": "2025-02-20T12:32:53.132Z",
-    "sunrise": "2025-02-20T07:01:34.082Z",
-    "sunset": "2025-02-20T18:04:12.182Z",
-    "sunriseEnd": "2025-02-20T07:04:17.987Z",
-    "sunsetStart": "2025-02-20T18:01:28.278Z",
-    "dawn": "2025-02-20T06:35:17.568Z",
-    "dusk": "2025-02-20T18:30:28.696Z",
-    "nauticalDawn": "2025-02-20T06:05:07.51Z",
-    "nauticalDusk": "2025-02-20T19:00:38.754Z",
-    "nightEnd": "2025-02-20T05:35:08.859Z",
-    "night": "2025-02-20T19:30:37.405Z",
-    "goldenHourEnd": "2025-02-20T07:36:59.509Z",
-    "goldenHour": "2025-02-20T17:28:46.756Z"
+    "solarNoon": "2025-12-16T12:14:40.51Z",
+    "sunrise": "2025-12-16T07:24:56.165Z",
+    "sunset": "2025-12-16T17:04:24.854Z",
+    "sunriseEnd": "2025-12-16T07:27:58.828Z",
+    "sunsetStart": "2025-12-16T17:01:22.192Z",
+    "dawn": "2025-12-16T06:56:02.774Z",
+    "dusk": "2025-12-16T17:33:18.245Z",
+    "nauticalDawn": "2025-12-16T06:23:38.134Z",
+    "nauticalDusk": "2025-12-16T18:05:42.886Z",
+    "nightEnd": "2025-12-16T05:52:07.048Z",
+    "night": "2025-12-16T18:37:13.971Z",
+    "goldenHourEnd": "2025-12-16T08:05:08.406Z",
+    "goldenHour": "2025-12-16T16:24:12.613Z"
   }
 }
 ```
@@ -270,7 +269,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -281,12 +280,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
