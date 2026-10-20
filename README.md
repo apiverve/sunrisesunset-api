@@ -1,13 +1,13 @@
-# [Sunrise Sunset API](https://sunrisesunset.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Sunrise Sunset API](https://apiverve.com/marketplace/sunrisesunset?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Sunrise Sunset is a simple tool for getting the sunrise and sunset times. It returns the sunrise and sunset times for a given location and date.
+Sunrise Sunset calculates exact sunrise and sunset times, twilight stages, and golden hour windows for any latitude and longitude coordinates. Paid plans can specify custom dates and receive solar noon.
 
 The Sunrise Sunset API provides a simple, reliable way to integrate sunrise sunset functionality into your applications. Built for developers who need production-ready sunrise sunset capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://sunrisesunset.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/sunrisesunset?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://sunrisesunset.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/sunrisesunset?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -162,7 +162,7 @@ go get github.com/apiverve/sunrisesunset-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Sunrise Sunset API](https://sunrisesunset.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Sunrise Sunset API](https://apiverve.com/marketplace/sunrisesunset?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/sunrisesunset](https://docs.apiverve.com/ref/sunrisesunset)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -192,11 +192,40 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Sunrise Sunset API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "solarNoon": "2025-12-16T12:14:40.51Z",
+    "sunrise": "2025-12-16T07:24:56.165Z",
+    "sunset": "2025-12-16T17:04:24.854Z",
+    "sunriseEnd": "2025-12-16T07:27:58.828Z",
+    "sunsetStart": "2025-12-16T17:01:22.192Z",
+    "dawn": "2025-12-16T06:56:02.774Z",
+    "dusk": "2025-12-16T17:33:18.245Z",
+    "nauticalDawn": "2025-12-16T06:23:38.134Z",
+    "nauticalDusk": "2025-12-16T18:05:42.886Z",
+    "nightEnd": "2025-12-16T05:52:07.048Z",
+    "night": "2025-12-16T18:37:13.971Z",
+    "goldenHourEnd": "2025-12-16T08:05:08.406Z",
+    "goldenHour": "2025-12-16T16:24:12.613Z"
+  }
 }
 ```
 
@@ -204,7 +233,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Sunrise Sunset API](https://sunrisesunset.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Sunrise Sunset API](https://apiverve.com/marketplace/sunrisesunset?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

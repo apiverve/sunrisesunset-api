@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Sunrise Sunset
   description: >-
-    Sunrise Sunset is a simple tool for getting the sunrise and sunset times. It
-    returns the sunrise and sunset times for a given location and date.
+    Sunrise Sunset calculates exact sunrise and sunset times, twilight stages,
+    and golden hour windows for any latitude and longitude coordinates. Paid
+    plans can specify custom dates and receive solar noon.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/sunrisesunset:
     get:
-      summary: Get Sunrise Sunset
+      summary: Sunrise Sunset
       description: Get the sunrise and sunset times for a given location
       operationId: sunrisesunset
       parameters:
