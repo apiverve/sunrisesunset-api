@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/sunrisesunset",
-  "version": "1.2.0",
-  "description": "Sunrise Sunset is a simple tool for getting the sunrise and sunset times. It returns the sunrise and sunset times for a given location and date.",
+  "version": "1.2.2",
+  "description": "Sunrise Sunset calculates exact sunrise and sunset times, twilight stages, and golden hour windows for any latitude and longitude coordinates. Paid plans can specify custom dates and receive solar noon.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "sunrise sunset", "sunrise sunset api", "sunrise sunset tool", "sunrise sunset software", "sunrise sunset service"
+    "sunrise sunset api", "sunset sunrise api", "sunrise and sunset times api", "sunrise sunset calculator api", "get sunset time api"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/sunrisesunset-api/issues"
   },
-  "homepage": "https://sunrisesunset.apiverve.com?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/sunrisesunset?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
