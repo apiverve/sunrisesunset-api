@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/sunrisesunset",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Sunrise Sunset calculates exact sunrise and sunset times, twilight stages, and golden hour windows for any latitude and longitude coordinates. Paid plans can specify custom dates and receive solar noon.",
   "main": "index.js",
   "types": "index.d.ts",
