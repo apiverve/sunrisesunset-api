@@ -4,6 +4,6 @@ require_relative "apiverve_sunrisesunset/client"
 
 module APIVerve
   module Sunrisesunset
-    VERSION = "1.2.2"
+    VERSION = "1.2.3"
   end
 end
