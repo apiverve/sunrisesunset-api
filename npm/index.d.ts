@@ -18,9 +18,28 @@ declare module '@apiverve/sunrisesunset' {
   export interface sunrisesunsetResponse {
     status: string;
     error: string | null;
-    data: any;
+    data: SunriseSunsetData;
     code?: number;
     premium?: PremiumInfo;
+  }
+
+
+  interface SunriseSunsetData {
+      solarNoon:     Date | null;
+      sunrise:       Date | null;
+      sunset:        Date | null;
+      sunriseEnd:    Date | null;
+      sunsetStart:   Date | null;
+      dawn:          Date | null;
+      dusk:          Date | null;
+      nauticalDawn:  Date | null;
+      nauticalDusk:  Date | null;
+      nightEnd:      Date | null;
+      night:         Date | null;
+      goldenHourEnd: Date | null;
+      goldenHour:    Date | null;
+      timezone?:     null | string;
+      localTimes?:   SunriseSunsetData;
   }
 
   export default class sunrisesunsetWrapper {

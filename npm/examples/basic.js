@@ -17,7 +17,8 @@ const api = new sunrisesunsetAPI({
 var query = {
   lat: 36.72016,
   lon: -4.42034,
-  date: "01-16-2026"
+  date: "01-16-2026",
+  local: false
 };
 
 // Make the API request using callback

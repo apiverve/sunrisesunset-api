@@ -30,7 +30,7 @@ class sunrisesunsetWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/sunrisesunset';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"lat":{"type":"number","required":true,"min":-90,"max":90},"lon":{"type":"number","required":true,"min":-180,"max":180},"date":{"type":"string","required":false,"format":"date"}};
+        this.validationRules = {"lat":{"type":"number","required":true,"min":-90,"max":90},"lon":{"type":"number","required":true,"min":-180,"max":180},"date":{"type":"string","required":false,"format":"date"},"local":{"type":"boolean","required":false,"format":"timezone","default":false}};
     }
 
     /**
