@@ -18,7 +18,7 @@ def call_sunrisesunset_api():
     """
     try:
         # Query parameters
-        params &#x3D; {&#x27;lat&#x27;: 36.72016, &#x27;lon&#x27;: -4.42034}
+        params &#x3D; {&#x27;lat&#x27;: 36.72016, &#x27;lon&#x27;: -4.42034, &#x27;local&#x27;: true}
 
         headers = {
             'x-api-key': API_KEY

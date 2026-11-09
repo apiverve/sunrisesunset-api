@@ -16,7 +16,8 @@ async function callSunriseSunsetAPI() {
     // Query parameters
     const params &#x3D; new URLSearchParams({
             lat: 36.72016,
-            lon: -4.42034
+            lon: -4.42034,
+            local: true
         });
 
     const response = await fetch(`${API_URL}?${params}`, {

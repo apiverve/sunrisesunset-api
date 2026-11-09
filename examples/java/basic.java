@@ -16,6 +16,7 @@ public class BasicExample {
             Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
         parameters.put(&quot;lat&quot;, 36.72016);
         parameters.put(&quot;lon&quot;, -4.42034);
+        parameters.put(&quot;local&quot;, true);
 
             // Execute the API request
             APIResponse response = client.execute(parameters);
