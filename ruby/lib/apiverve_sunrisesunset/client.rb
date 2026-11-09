@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Sunrisesunset::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ lat: 36.72016, lon: -4.42034, date: "01-16-2026" })
+    #   response = client.execute({ lat: 36.72016, lon: -4.42034, date: "01-16-2026", local: true })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/sunrisesunset?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'lat' => { type: 'number', required: true, min: -90, max: 90 }, 'lon' => { type: 'number', required: true, min: -180, max: 180 }, 'date' => { type: 'string', required: false, format: 'date' } }
+      VALIDATION_RULES = { 'lat' => { type: 'number', required: true, min: -90, max: 90 }, 'lon' => { type: 'number', required: true, min: -180, max: 180 }, 'date' => { type: 'string', required: false, format: 'date' }, 'local' => { type: 'boolean', required: false, format: 'timezone' } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {
