@@ -1,10 +1,10 @@
 [project]
 name = "apiverve-sunrisesunset"
-version = "1.2.4"
+version = "1.2.5"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
-description = "Sunrise Sunset calculates exact sunrise and sunset times, twilight stages, and golden hour windows for any latitude and longitude coordinates. Paid plans can specify custom dates and receive solar noon."
+description = "Sunrise Sunset calculates exact sunrise and sunset times, twilight stages, and golden hour windows for any latitude and longitude coordinates. Paid plans can specify custom dates and receive solar noon. With local=true, the response names the IANA timezone of the coordinates on any plan, and paid plans also get each time in local time with its UTC offset."
 keywords = ["sunrise sunset api", "sunset sunrise api", "sunrise and sunset times api", "sunrise sunset calculator api", "get sunset time api"]
 readme = "README.md"
 requires-python = ">=3.9"

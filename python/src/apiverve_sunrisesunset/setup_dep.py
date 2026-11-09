@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name='apiverve_sunrisesunset',
-    version='1.2.4',
+    version='1.2.5',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
         'requests',
         'setuptools'
     ],
-    description='Sunrise Sunset calculates exact sunrise and sunset times, twilight stages, and golden hour windows for any latitude and longitude coordinates. Paid plans can specify custom dates and receive solar noon.',
+    description='Sunrise Sunset calculates exact sunrise and sunset times, twilight stages, and golden hour windows for any latitude and longitude coordinates. Paid plans can specify custom dates and receive solar noon. With local=true, the response names the IANA timezone of the coordinates on any plan, and paid plans also get each time in local time with its UTC offset.',
     author='APIVerve',
     author_email='hello@apiverve.com',
     url='https://apiverve.com/marketplace/sunrisesunset?utm_source=pypi&utm_medium=referral&utm_content=homepage',

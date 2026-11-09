@@ -26,7 +26,8 @@ class SunrisesunsetAPIClient:
     VALIDATION_RULES = {
         "lat": {"type": "number", "required": True, "min": -90, "max": 90},
         "lon": {"type": "number", "required": True, "min": -180, "max": 180},
-        "date": {"type": "string", "required": False, "format": "date"}
+        "date": {"type": "string", "required": False, "format": "date"},
+        "local": {"type": "boolean", "required": False, "format": "timezone", "default": False}
     }
 
     # Format validation patterns

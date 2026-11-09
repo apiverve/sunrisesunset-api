@@ -1,7 +1,7 @@
 Sunrise Sunset API
 ============
 
-Sunrise Sunset calculates exact sunrise and sunset times, twilight stages, and golden hour windows for any latitude and longitude coordinates. Paid plans can specify custom dates and receive solar noon.
+Sunrise Sunset calculates exact sunrise and sunset times, twilight stages, and golden hour windows for any latitude and longitude coordinates. Paid plans can specify custom dates and receive solar noon. With local=true, the response names the IANA timezone of the coordinates on any plan, and paid plans also get each time in local time with its UTC offset.
 
 
 [![PyPI version](https://img.shields.io/pypi/v/apiverve-sunrisesunset.svg)](https://pypi.org/project/apiverve-sunrisesunset/)
@@ -46,7 +46,8 @@ api = SunrisesunsetAPIClient("[YOUR_API_KEY]")
 query = {
     "lat": 36.72016,
     "lon": -4.42034,
-    "date": "01-16-2026"
+    "date": "01-16-2026",
+    "local": true
 }
 
 try:
@@ -88,7 +89,8 @@ Using the API client, you can perform requests to the API.
 query = {
     "lat": 36.72016,
     "lon": -4.42034,
-    "date": "01-16-2026"
+    "date": "01-16-2026",
+    "local": true
 }
 ```
 
@@ -109,19 +111,35 @@ print(result)
   "status": "ok",
   "error": null,
   "data": {
-    "solarNoon": "2025-12-16T12:14:40.51Z",
-    "sunrise": "2025-12-16T07:24:56.165Z",
-    "sunset": "2025-12-16T17:04:24.854Z",
-    "sunriseEnd": "2025-12-16T07:27:58.828Z",
-    "sunsetStart": "2025-12-16T17:01:22.192Z",
-    "dawn": "2025-12-16T06:56:02.774Z",
-    "dusk": "2025-12-16T17:33:18.245Z",
-    "nauticalDawn": "2025-12-16T06:23:38.134Z",
-    "nauticalDusk": "2025-12-16T18:05:42.886Z",
-    "nightEnd": "2025-12-16T05:52:07.048Z",
-    "night": "2025-12-16T18:37:13.971Z",
-    "goldenHourEnd": "2025-12-16T08:05:08.406Z",
-    "goldenHour": "2025-12-16T16:24:12.613Z"
+    "solarNoon": "2026-01-16T12:28:27.256Z",
+    "sunrise": "2026-01-16T07:30:14.174Z",
+    "sunset": "2026-01-16T17:26:40.338Z",
+    "sunriseEnd": "2026-01-16T07:33:11.786Z",
+    "sunsetStart": "2026-01-16T17:23:42.726Z",
+    "dawn": "2026-01-16T07:02:03.459Z",
+    "dusk": "2026-01-16T17:54:51.053Z",
+    "nauticalDawn": "2026-01-16T06:30:17.010Z",
+    "nauticalDusk": "2026-01-16T18:26:37.502Z",
+    "nightEnd": "2026-01-16T05:59:14.883Z",
+    "night": "2026-01-16T18:57:39.629Z",
+    "goldenHourEnd": "2026-01-16T08:09:09.341Z",
+    "goldenHour": "2026-01-16T16:47:45.171Z",
+    "timezone": "Europe/Madrid",
+    "localTimes": {
+      "solarNoon": "2026-01-16T13:28:27+01:00",
+      "sunrise": "2026-01-16T08:30:14+01:00",
+      "sunset": "2026-01-16T18:26:40+01:00",
+      "sunriseEnd": "2026-01-16T08:33:11+01:00",
+      "sunsetStart": "2026-01-16T18:23:42+01:00",
+      "dawn": "2026-01-16T08:02:03+01:00",
+      "dusk": "2026-01-16T18:54:51+01:00",
+      "nauticalDawn": "2026-01-16T07:30:17+01:00",
+      "nauticalDusk": "2026-01-16T19:26:37+01:00",
+      "nightEnd": "2026-01-16T06:59:14+01:00",
+      "night": "2026-01-16T19:57:39+01:00",
+      "goldenHourEnd": "2026-01-16T09:09:09+01:00",
+      "goldenHour": "2026-01-16T17:47:45+01:00"
+    }
   }
 }
 ```
@@ -142,7 +160,8 @@ api = SunrisesunsetAPIClient("[YOUR_API_KEY]")
 query = {
     "lat": 36.72016,
     "lon": -4.42034,
-    "date": "01-16-2026"
+    "date": "01-16-2026",
+    "local": true
 }
 
 try:
@@ -167,7 +186,8 @@ api = SunrisesunsetAPIClient("[YOUR_API_KEY]")
 query = {
     "lat": 36.72016,
     "lon": -4.42034,
-    "date": "01-16-2026"
+    "date": "01-16-2026",
+    "local": true
 }
 
 try:
@@ -205,7 +225,8 @@ from apiverve_sunrisesunset.apiClient import SunrisesunsetAPIClient, Sunrisesuns
 query = {
     "lat": 36.72016,
     "lon": -4.42034,
-    "date": "01-16-2026"
+    "date": "01-16-2026",
+    "local": true
 }
 
 # Using context manager ensures proper cleanup
@@ -235,7 +256,8 @@ api = SunrisesunsetAPIClient("[YOUR_API_KEY]", debug=True)
 query = {
     "lat": 36.72016,
     "lon": -4.42034,
-    "date": "01-16-2026"
+    "date": "01-16-2026",
+    "local": true
 }
 
 # Debug information will be printed to console
@@ -254,7 +276,8 @@ api = SunrisesunsetAPIClient("[YOUR_API_KEY]")
 query = {
     "lat": 36.72016,
     "lon": -4.42034,
-    "date": "01-16-2026"
+    "date": "01-16-2026",
+    "local": true
 }
 
 try:
