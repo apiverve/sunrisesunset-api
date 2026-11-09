@@ -27,5 +27,11 @@ namespace APIVerve.API.SunriseSunset
         /// </summary>
         [JsonProperty("date")]
         public string Date { get; set; }
+
+        /// <summary>
+        /// Also return the timezone of the coordinates and every time in local time
+        /// </summary>
+        [JsonProperty("local")]
+        public bool? Local { get; set; }
     }
 }

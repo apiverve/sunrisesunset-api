@@ -69,7 +69,8 @@ namespace APIVerve.API.SunriseSunset
         {
             { "lat", new ValidationRule { Type = "number", Required = true, Min = -90, Max = 90 } },
             { "lon", new ValidationRule { Type = "number", Required = true, Min = -180, Max = 180 } },
-            { "date", new ValidationRule { Type = "string", Required = false, Format = "date" } }
+            { "date", new ValidationRule { Type = "string", Required = false, Format = "date" } },
+            { "local", new ValidationRule { Type = "boolean", Required = false, Format = "timezone" } }
         };
 
         /// <summary>Format validation patterns</summary>

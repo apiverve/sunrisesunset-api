@@ -24,10 +24,58 @@ namespace APIVerve.API.SunriseSunset
         public object Error { get; set; }
 
         [JsonProperty("data")]
-        public Dictionary<string, DateTimeOffset?> Data { get; set; }
+        public Data Data { get; set; }
 
         [JsonProperty("premium")]
         public Premium Premium { get; set; }
+    }
+
+    public partial class Data
+    {
+        [JsonProperty("solarNoon")]
+        public DateTimeOffset? SolarNoon { get; set; }
+
+        [JsonProperty("sunrise")]
+        public DateTimeOffset? Sunrise { get; set; }
+
+        [JsonProperty("sunset")]
+        public DateTimeOffset? Sunset { get; set; }
+
+        [JsonProperty("sunriseEnd")]
+        public DateTimeOffset? SunriseEnd { get; set; }
+
+        [JsonProperty("sunsetStart")]
+        public DateTimeOffset? SunsetStart { get; set; }
+
+        [JsonProperty("dawn")]
+        public DateTimeOffset? Dawn { get; set; }
+
+        [JsonProperty("dusk")]
+        public DateTimeOffset? Dusk { get; set; }
+
+        [JsonProperty("nauticalDawn")]
+        public DateTimeOffset? NauticalDawn { get; set; }
+
+        [JsonProperty("nauticalDusk")]
+        public DateTimeOffset? NauticalDusk { get; set; }
+
+        [JsonProperty("nightEnd")]
+        public DateTimeOffset? NightEnd { get; set; }
+
+        [JsonProperty("night")]
+        public DateTimeOffset? Night { get; set; }
+
+        [JsonProperty("goldenHourEnd")]
+        public DateTimeOffset? GoldenHourEnd { get; set; }
+
+        [JsonProperty("goldenHour")]
+        public DateTimeOffset? GoldenHour { get; set; }
+
+        [JsonProperty("timezone")]
+        public string Timezone { get; set; }
+
+        [JsonProperty("localTimes", NullValueHandling = NullValueHandling.Ignore)]
+        public Data LocalTimes { get; set; }
     }
 
     public partial class Premium
