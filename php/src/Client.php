@@ -15,7 +15,7 @@ use APIVerve\Sunrisesunset\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['lat' => 36.72016, 'lon' => -4.42034, 'date' => '01-16-2026']);
+ * $response = $client->execute(['lat' => 36.72016, 'lon' => -4.42034, 'date' => '01-16-2026', 'local' => true]);
  * print_r($response);
  * ```
  *
@@ -36,7 +36,8 @@ class Client
     private const VALIDATION_RULES = [
         'lat' => ['type' => 'number', 'required' => true, 'min' => -90, 'max' => 90],
         'lon' => ['type' => 'number', 'required' => true, 'min' => -180, 'max' => 180],
-        'date' => ['type' => 'string', 'required' => false, 'format' => 'date']
+        'date' => ['type' => 'string', 'required' => false, 'format' => 'date'],
+        'local' => ['type' => 'boolean', 'required' => false, 'format' => 'timezone']
     ];
 
     /**
